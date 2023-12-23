@@ -60,10 +60,18 @@
 
 		details {
 			position: relative;
-			width: 175px;
-			margin-right: 1rem;
+			width: 190px;
+	
 		}
-		
+
+		.left {
+			float:left;
+					margin-left: 1rem;
+		}
+		.right {
+			float:right:
+					margin-right: 1rem;
+			}
 		details[open] {
 			z-index: 1;
 		}
@@ -193,7 +201,7 @@
 <body>
      <section>
        <form action="https://beforus.github.io/beforus" method="GET">
-	<details class="custom-select">
+	<details class="custom-select left">
 	<summary class="radios">
 		<input type="radio" name="day" id="default" title="Day of birth?" checked>
 	</summary>
@@ -221,7 +229,7 @@
 		</li>
 	</ul>
 </details>
-<details class="custom-select">
+<details class="custom-select right">
 	<summary class="radios">
 		<input type="radio" name="item" id="default" title="Please Select Year" checked>
 		<input type="radio" name="sunday" id="item1" title="Item 1">
