@@ -4,188 +4,201 @@
     <title>Foremily</title>
       <!--Stylesheet-->
     <style>
-      body {
-          background-color: #193c6d;
-          filter: progid: DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#003073', endColorstr='#029797');
-          background-image: url(//img.alicdn.com/tps/TB1d.u8MXXXXXXuXFXXXXXXXXXX-1900-790.jpg);
-          background-size: 100%;
-          background-image: -webkit-gradient(linear, 0 0, 100% 100%, color-stop(0, #003073), color-stop(100%, #029797));
-          background-image: -webkit-linear-gradient(135deg, #003073, #029797);
-          background-image: -moz-linear-gradient(45deg, #003073, #029797);
-          background-image: -ms-linear-gradient(45deg, #003073 0, #029797 100%);
-          background-image: -o-linear-gradient(45deg, #003073, #029797);
-          background-image: linear-gradient(135deg, #003073, #029797);
-          text-align: center;
-          margin: 0px;
-          overflow: hidden;
-          }
-    
-        form{
-            height: 175px;
-            width: 400px;
-            background-color: rgba(255,255,255,0.13);
-            position: absolute;
-            transform: translate(-50%,-50%);
-            top: 50%;
-            left: 50%;
-            border-radius: 10px;
-            backdrop-filter: blur(10px);
-            border: 2px solid rgba(255,255,255,0.1);
-            box-shadow: 0 0 40px rgba(8,7,16,0.6);
-            padding: 50px 35px;
-        }
-    
-        form *{
-            font-family: 'Poppins',sans-serif;
-            color: #ffffff;
-            letter-spacing: 0.5px;
-            outline: none;
-            border: none;
-        }
-        form h3{
-            font-size: 32px;
-            font-weight: 500;
-            line-height: 42px;
-            text-align: center;
-        }
-        
-        .social{
-              margin-top: 30px;
-              display: flex;
-        }
-        .social div{
-              width: 150px;
-              border-radius: 3px;
-              padding: 5px 10px 10px 5px;
-              background-color: rgba(255,255,255,0.27);
-              color: #eaf0fb;
-              text-align: center;
-        }
-        .social div:hover{
-              background-color: rgba(255,255,255,0.47);
-        }
-        
-        .social .fb{
-              margin-left: auto;
-        }
-        .social i{
-              margin-right: auto;
-        }
-         button{
-                margin-top: 50px;
-                width: 100%;
-                background-color: #ffffff;
-                color: #080710;
-                padding: 5px 0;
-                font-size: 18px;
-                font-weight: 600;
-                border-radius: 5px;
-                cursor: pointer;
-        }
-        
-        label{
-                display: block;
-                margin-top: 30px;
-                font-size: 16px;
-                font-weight: 500;
-        }
-        input{
-                display: block;
-                height: 50px;
-                width: 100%;
-                background-color: rgba(255,255,255,0.07);
-                border-radius: 3px;
-                padding: 0 10px;
-                margin-top: 8px;
-                font-size: 14px;
-                font-weight: 300;
-        }
-            ::placeholder{
-                color: #e5e5e5;
-        }
-         /* The container must be positioned relative: */
-.custom-select {
-  position: relative;
-  font-family: Arial;
+details {
+	position: relative;
+	width: 300px;
+	margin-right: 1rem;
 }
 
-.custom-select select {
-  display: none; /*hide original SELECT element: */
+details[open] {
+	z-index: 1;
 }
 
-.select-selected {
-  background-color: DodgerBlue;
+summary {
+	padding: 1rem;
+	cursor: pointer;
+	border-radius: 5px;
+	background-color: #ddd;
+	list-style: none;
 }
 
-/* Style the arrow inside the select element: */
-.select-selected:after {
-  position: absolute;
-  content: "";
-  top: 14px;
-  right: 10px;
-  width: 0;
-  height: 0;
-  border: 6px solid transparent;
-  border-color: #fff transparent transparent transparent;
+summary::-webkit-details-marker {
+	display: none;
 }
 
-/* Point the arrow upwards when the select box is open (active): */
-.select-selected.select-arrow-active:after {
-  border-color: transparent transparent #fff transparent;
-  top: 7px;
+details[open] summary:before {
+	content: '';
+	display: block;
+	width: 100vw;
+	height: 100vh;
+	background: transparent;
+	position: fixed;
+	top: 0;
+	left: 0;
 }
 
-/* style the items (options), including the selected item: */
-.select-items div,.select-selected {
-  color: #ffffff;
-  padding: 8px 16px;
-  border: 1px solid transparent;
-  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
-  cursor: pointer;
+summary:after {
+	content: '';
+	display: inline-block;
+	float: right;
+	width: .5rem;
+	height: .5rem;
+	border-bottom: 1px solid currentColor;
+	border-left: 1px solid currentColor;
+	border-bottom-left-radius: 2px;
+	transform: rotate(45deg) translate(50%, 0%);
+	transform-origin: center center;
+	transition: transform ease-in-out 100ms
 }
 
-/* Style items (options): */
-.select-items {
-  position: absolute;
-  background-color: DodgerBlue;
-  top: 100%;
-  left: 0;
-  right: 0;
-  z-index: 99;
+summary:focus {
+	outline: none;
 }
 
-/* Hide the items when the select box is closed: */
-.select-hide {
-  display: none;
+details[open] summary:after {
+	transform: rotate(-45deg) translate(0%, 0%);
 }
 
-.select-items div:hover, .same-as-selected {
-  background-color: rgba(0, 0, 0, 0.1);
-} 
+ul {
+	width: 100%;
+	background: #ddd;
+	position: absolute;
+	top: calc(100% + .5rem);
+	left: 0;
+	padding: 1rem;
+	margin: 0;
+	box-sizing: border-box;
+	border-radius: 5px;
+	max-height: 200px;
+	overflow-y: auto;
+}
+
+li {
+	margin: 0;
+	padding: 1rem 0;
+	border-bottom: 1px solid #ccc;
+}
+
+li:first-child {
+	padding-top: 0;
+}
+
+li:last-child {
+	padding-bottom: 0;
+	border-bottom: none;
+}
+
+/* FAKE SELECT */
+
+summary.radios {
+	counter-reset: radios;
+}
+
+summary.radios:before {
+	content: var(--selection);
+}
+
+input[type=radio] {
+	counter-increment: radios;
+	appearance: none;
+	display: none;
+}
+
+input[type=radio]:checked {
+	display: inline;
+	--display: block;
+}
+
+input[type=radio]:after {
+	content: attr(title);
+	display: inline;
+	font-size: 1rem;
+}
+
+ul.list {
+	counter-reset: labels;
+}
+
+label {
+	width: 100%;
+	display: flex;
+	cursor: pointer;
+	justify-content: space-between;
+}
+
+label span {
+	--display: none;
+	display: var(--display);
+	width: 1rem;
+	height: 1rem;
+	border: 1px solid #727272;
+	border-radius: 3px;
+}
       </style> 
 </head>
 <body>
      <section>
-       <form action="https://beforus.github.io/zeus" method="GET">
-           <table>
-                <tr>
-                    <td><label for="birthday">Thee day of birth?</label>&nbsp;&nbsp;&nbsp;</td>
-                    <td>
-                        <div class="custom-select" style="width:200px;">
-                        <select name="birthday">
-                              <option value=""> </option>
-                              <option value="sunday"> Sunday </option>
-                              <option value="monday"> Monday </option>
-                              <option value="tuesday"> Tuesday </option>
-                              <option value="wednesday"> Wednesday </option>
-                              <option value="thursady"> Thurday </option>
-                              <option value="friday"> Friday </option>
-                              <option value="saturday"> Saturday </option>
-                        </select>
-                        </div>
-                    </td>
-               </tr>
-           </table>
+       <form action="https://beforus.github.io/beforus" method="GET">
+          <details class="custom-select">
+	        <summary class="radios">
+        		<input type="radio" name="item" id="default" title="Auswählen..." checked>
+        		<input type="radio" name="item" id="item1" title="Item 1">
+        		<input type="radio" name="item" id="item2" title="Item 2">
+        		<input type="radio" name="item" id="item3" title="Item 3">
+        		<input type="radio" name="item" id="item4" title="Item 4">
+        		<input type="radio" name="item" id="item5" title="Item 5">
+	        </summary>
+	<ul class="list">
+		<li>
+			<label for="item1">
+				Item 1
+				<span></span>
+			</label>
+		</li>
+		<li>
+			<label for="item2">Item 2</label>
+		</li>
+		<li>
+			<label for="item3">Item 3</label>
+		</li>
+		<li>
+			<label for="item4">Item 4</label>
+		</li>
+		<li>
+			<label for="item5">Item 5</label>
+		</li>
+	</ul>
+</details>
+ <details class="custom-select">
+	        <summary class="radios">
+        		<input type="radio" name="item" id="default" title="Auswählen..." checked>
+        		<input type="radio" name="item" id="item1" title="Item 1">
+        		<input type="radio" name="item" id="item2" title="Item 2">
+        		<input type="radio" name="item" id="item3" title="Item 3">
+        		<input type="radio" name="item" id="item4" title="Item 4">
+        		<input type="radio" name="item" id="item5" title="Item 5">
+	        </summary>
+	<ul class="list">
+		<li>
+			<label for="item1">
+				Item 1
+				<span></span>
+			</label>
+		</li>
+		<li>
+			<label for="item2">Item 2</label>
+		</li>
+		<li>
+			<label for="item3">Item 3</label>
+		</li>
+		<li>
+			<label for="item4">Item 4</label>
+		</li>
+		<li>
+			<label for="item5">Item 5</label>
+		</li>
+	</ul>
+</details>
         <button>UNLOCK</button>
        </form>
   </section>
