@@ -110,8 +110,19 @@
        <form action="https://beforus.github.io/zeus" method="GET">
            <table>
                 <tr>
-                    <td>DAY OF BIRTH &nbsp;&nbsp;&nbsp;</td>
-                    <td><input type="text" id="name" name="name" /></td>
+                    <td><label for="birthday">DAY OF BIRTH </label>&nbsp;&nbsp;&nbsp;</td>
+                    <td>
+                        <select name="birthday" id="birthday">
+                          <option value="">----</option>
+                          <option value="sunday">Sunday</option>
+                          <option value="monday">Monday</option>
+                          <option value="tuesday">Tuesday</option>
+                          <option value="wednesday">Wednesday</option>
+                          <option value="thursady">Thurday</option>
+                          <option value="friday">Friday</option>
+                          <option value="saturday">Saturday</option>
+                        </select>
+                    </td>
                </tr>
            </table>
         <button>UNLOCK</button>
