@@ -1,5 +1,1 @@
-# ʌ.live
-Type: Html
-Description: Login  
-
-// three.js - https://github.com/mrdoob/three.js
+Single sign-in page composed of html, css and javascript. 
