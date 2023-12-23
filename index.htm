@@ -24,7 +24,7 @@
             height: 175px;
             width: 400px;
             background-color: rgba(255,255,255,0.13);
-            position: inhierted;
+            position: fixed;
             transform: translate(-50%,-50%);
             top: 50%;
             left: 50%;
@@ -201,7 +201,14 @@
        <form action="https://beforus.github.io/beforus" method="GET">
 	<details class="custom-select left">
 	<summary class="radios">
-		<input type="radio" name="day" id="default" title="Day of birth?" checked>
+		<input type="radio" name="noday" id="default" title="Birth Day?" checked>
+		<input type="radio" name="sunday" id="sunday" title="sunday">
+		<input type="radio" name="monday" id="monday" title="monday">
+		<input type="radio" name="tuesday" id="tuesday" title="tuesday">
+		<input type="radio" name="wednesday" id="wednesday" title="wednesday">
+		<input type="radio" name="thursday" id="thursday" title="thursday">
+		<input type="radio" name="friday" id="wednesday" title="friday">
+		<input type="radio" name="thursday" id="sunday" title="saturday">
 	</summary>
 	<ul class="list">
 		<li>
@@ -229,12 +236,27 @@
 </details>
 <details class="custom-select right">
 	<summary class="radios">
-		<input type="radio" name="item" id="default" title="Please Select Year" checked>
-		<input type="radio" name="sunday" id="item1" title="Item 1">
-		<input type="radio" name="monday" id="item2" title="Item 2">
-		<input type="radio" name="tuesday" id="item3" title="Item 3">
-		<input type="radio" name="wednesday" id="item4" title="Item 4">
-		<input type="radio" name="thursday" id="item5" title="Item 5">
+		<input type="radio" name="noyear" id="default" title="Birth Year?" checked>
+		<input type="radio" name="2010" id="2010" title="Item 1">
+		<input type="radio" name="2009" id="2009" title="Item 2">
+		<input type="radio" name="2008" id="2008" title="Item 3">
+		<input type="radio" name="2007" id="2007" title="Item 4">
+		<input type="radio" name="2006" id="2006" title="Item 5">
+		<input type="radio" name="2005" id="2005" title="Item 1">
+		<input type="radio" name="2004" id="2004" title="Item 2">
+		<input type="radio" name="2003" id="2003" title="Item 3">
+		<input type="radio" name="2002" id="2002" title="Item 4">
+		<input type="radio" name="2001" id="2001" title="Item 5">
+		<input type="radio" name="2000" id="2000" title="Item 1">
+		<input type="radio" name="1979" id="1979" title="Item 2">
+		<input type="radio" name="1978" id="1978" title="Item 3">
+		<input type="radio" name="1977" id="1977" title="Item 4">
+		<input type="radio" name="1976" id="1976" title="Item 5">
+		<input type="radio" name="1975" id="1975" title="Item 1">
+		<input type="radio" name="1974" id="1974" title="Item 2">
+		<input type="radio" name="1973" id="1973" title="Item 3">
+		<input type="radio" name="1972" id="1972" title="Item 4">
+		<input type="radio" name="1970" id="1971" title="Item 5">
 	</summary>
 	<ul class="list">
 		<li>
