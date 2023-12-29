@@ -198,119 +198,43 @@
 </head>
 <body>
      <section>
-       <form action="https://beforus.github.io/beforus" method="GET">
-	<details class="custom-select left">
-	<summary class="radios">
-		<input type="radio" name="noday" id="default" title="Birth Day?" checked>
-		<input type="radio" name="sunday" id="sunday" title="sunday">
-		<input type="radio" name="monday" id="monday" title="monday">
-		<input type="radio" name="tuesday" id="tuesday" title="tuesday">
-		<input type="radio" name="wednesday" id="wednesday" title="wednesday">
-		<input type="radio" name="thursday" id="thursday" title="thursday">
-		<input type="radio" name="friday" id="wednesday" title="friday">
-		<input type="radio" name="thursday" id="sunday" title="saturday">
-	</summary>
-	<ul class="list">
-		<li>
-		<label for="sunday">Sunday</label>
-		</li>
-		<li>
-		<label for="monday">Monday</label>
-		</li>
-		<li>
-		<label for="tuesday">Tuesday</label>
-		</li>
-		<li>
-		<label for="wednesday">Wednesday</label>
-		</li>
-		<li>
-		<label for="thurday">Thursday</label>
-		</li>
-		<li>
-		<label for="friday">Friday</label>
-		</li>
-		<li>
-		<label for="saturday">Saturday</label>
-		</li>
-	</ul>
-</details>
-<details class="custom-select right">
-	<summary class="radios">
-		<input type="text" name="noyear" id="default" title="Birth Year?" />
-		<input type="radio" name="2010" id="2010" title="Item 1">
-		<input type="radio" name="2009" id="2009" title="Item 2">
-		<input type="radio" name="2008" id="2008" title="Item 3">
-		<input type="radio" name="2007" id="2007" title="Item 4">
-		<input type="radio" name="2006" id="2006" title="Item 5">
-		<input type="radio" name="2005" id="2005" title="Item 1">
-		<input type="radio" name="2004" id="2004" title="Item 2">
-		<input type="radio" name="2003" id="2003" title="Item 3">
-		<input type="radio" name="2002" id="2002" title="Item 4">
-		<input type="radio" name="2001" id="2001" title="Item 5">
-		<input type="radio" name="2000" id="2000" title="Item 1">
-		<input type="radio" name="1979" id="1979" title="Item 2">
-		<input type="radio" name="1978" id="1978" title="Item 3">
-		<input type="radio" name="1977" id="1977" title="Item 4">
-		<input type="radio" name="1976" id="1976" title="Item 5">
-		<input type="radio" name="1975" id="1975" title="Item 1">
-		<input type="radio" name="1974" id="1974" title="Item 2">
-		<input type="radio" name="1973" id="1973" title="Item 3">
-		<input type="radio" name="1972" id="1972" title="Item 4">
-		<input type="radio" name="1970" id="1971" title="Item 5">
-	</summary>
-	<ul class="list">
-		<li>
-			<label for="item1">
-				2008
-			</label>
-		</li>
-		<li>
-			<label for="item2">2007</label>
-		</li>
-		<li>
-			<label for="item3">2006</label>
-		</li>
-		<li>
-			<label for="item4">2005</label>
-		</li>
-		<li>
-			<label for="item5">2004</label>
-		</li>
-				<li>
-			<label for="item1">
-				2008
-			</label>
-		</li>
-		<li>
-			<label for="item2">2003</label>
-		</li>
-		<li>
-			<label for="item3">2002</label>
-		</li>
-		<li>
-			<label for="item4">2001</label>
-		</li>
-		<li>
-			<label for="item5">2000</label>
-		</li>
-				<li>
-			<label for="item1">
-				1980
-			</label>
-		</li>
-		<li>
-			<label for="item2">1979</label>
-		</li>
-		<li>
-			<label for="item3">1976</label>
-		</li>
-		<li>
-			<label for="item4">1975</label>
-		</li>
-		
-	</ul>
-</details>
-        <button>Unlock</button>
+       <form action="/action_page.php"> method="GET">
+	<div class="custom-select left">
+	   <select name="d" id="d">
+		<option value="sunday">Sunday</option>
+		<option value="monday">Monday</option>
+		<option value="tuesday">Tuesday</option>
+		<option value="wednesday">Wednesday</option>
+		<option value="thurday">Thursday</option>
+		<option value="friday">Friday</option>
+		<option value="saturday">Saturday</option>
+	   </select>
+	</div>
+	<details class="custom-select right">
+	    <select name="y" id="y">
+		<option value="2010">2010</option>
+		<option value="2009">2009</option>
+		<option value="2008">2008</option>
+		<option value="2007">2007</option>
+		<option value="2006">2006</option>
+		<option value="2005">2005</option>
+		<option value="2004">2004</option>
+		<option value="2003">2003</option>
+		<option value="2002">2002</option>
+		<option value="2001">2001</option>
+		<option value="2000">2000</option>
+		<option value="1979">1979</option>
+		<option value="1978">1978</option>
+		<option value="1977">1977</option>
+		<option value="1976">1976</option>
+		<option value="1975">1975</option>
+		<option value="1974">1974</option>
+		<option value="1973">1973</option>
+		<option value="1972">1972</option>
+		<option value="1970">1971</option>
+	    </select>
+	
+        		<button>Submit</button>
        </form>
   </section>
 <script>   
