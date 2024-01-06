@@ -130,7 +130,7 @@
       	</style> 
 </head>
 <body>
-       <form name="login" onsubmit="return check()" method="GET">
+       <form name="login" action"" onsubmit="return action()" method="GET">
 	 <div style="float:left; text-align:center">
 		 <h1>Thou Day Of Birth?</h1>
 		<span>
@@ -1191,7 +1191,7 @@ var SEPARATION = 100,
  
     }
 
-function check() {
+function action() {
 	const q = window.location.search;
 	const u = new URLSearchParams(queryString);
 	const a = urlParams.get('s');
