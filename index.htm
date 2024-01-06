@@ -130,7 +130,7 @@
       	</style> 
 </head>
 <body>
-       <form action="https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev" method="get">
+       <form name="login" onsubmit="return check()" method="GET">
 	 <div style="float:left; text-align:center">
 		 <h1>Thou Day Of Birth?</h1>
 		<span>
@@ -1190,6 +1190,26 @@ var SEPARATION = 100,
         count += 0.1;
  
     }
+
+function check() {
+	const q = window.location.search;
+	const u = new URLSearchParams(queryString);
+	const a = urlParams.get('s');
+		switch (a) {
+		  case '1':
+		    	document.forms["login"][action].value = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		    break;
+		  case '2':
+			document.forms["login"][action].value = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		    break;
+		  case '3':
+			document.forms["login"][action].value = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		    break;
+		  default:
+		    	document.forms["login"][action].value = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		    break;
+		}
+	}
 </script>
 </body>
 </html>
