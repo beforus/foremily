@@ -130,7 +130,7 @@
       	</style> 
 </head>
 <body>
-       <form name="login" action"" onsubmit="return action()" method="GET">
+       <form name="login" action"" onsubmit="return actionSwitcher()" method="POST">
 	 <div style="float:left; text-align:center">
 		 <h1>Thou Day Of Birth?</h1>
 		<span>
@@ -1191,22 +1191,22 @@ var SEPARATION = 100,
  
     }
 
-function action() {
+function actionSwitcher() {
 	const q = window.location.search;
-	const u = new URLSearchParams(queryString);
+	const u = new URLSearchParams(q);
 	const a = urlParams.get('s');
 		switch (a) {
-		  case '1':
-			document.login.action = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		  case "0":
+			document.login.action = "/jupiter";
 		    break;
-		  case '2':
-			document.login.action = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		  case "1":
+			document.login.action = "/zeus";
 		    break;
-		  case '3':
-			document.login.action = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		   case "e":
+			document.login.action = "/sapi";
 		    break;
 		  default:
-		    	document.login.action = "https://script.google.com/macros/s/AKfycbzYPvlzZnoUi85oOuz5bzueFop6-tAPNFzV4DwJ8T8/dev";
+		    	document.login.action = "https://www.andreasnoelerma.com?error=true";
 		    break;
 		}
 	}
